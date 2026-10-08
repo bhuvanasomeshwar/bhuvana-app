@@ -1,121 +1,52 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Bhuvana's Site</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: "Segoe UI", Arial, sans-serif;
-      line-height: 1.6;
-      color: #333;
-      max-width: 820px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-    nav {
-      margin-bottom: 24px;
-    }
-    nav a {
-      display: inline-block;
-      margin-right: 14px;
-      padding: 8px 14px;
-      background-color: #7B2D8E;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 6px;
-      font-size: 14px;
-      font-weight: 600;
-      transition: background-color 0.2s;
-    }
-    nav a:hover { background-color: #6A0DAD; }
-    h1 { color: #2c3e50; font-size: 28px; }
-    p { margin-bottom: 12px; }
-    h2 {
-      color: #2980b9;
-      margin: 24px 0 10px 0;
-      font-size: 22px;
-    }
-    .btn {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #7B2D8E;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: 600;
-      transition: background-color 0.2s;
-    }
-    .btn:hover { background-color: #6A0DAD; }
-    ul { padding-left: 22px; }
-    ul li { margin-bottom: 8px; }
-    .address {
-      margin-top: 40px;
-      padding-top: 20px;
-      border-top: 1px solid #ddd;
-      color: #555;
-      font-style: italic;
-      font-size: 15px;
-    }
-    footer {
-      margin-top: 30px;
-      text-align: center;
-      color: #888;
-      font-size: 13px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <nav>
-    <a href="#home">Bhuvana's Site</a>
-    <a href="#home">Bhuvana Home</a>
-    <a href="#about">About Us</a>
-    <a href="#whatWeDo">What We Do</a>
-    <a href="#contact">Contact Us</a>
+  <nav class="sidebar" aria-label="Main navigation">
+    <div class="brand">Bhuvana</div>
+    <button class="nav-btn active" data-target="home">Home</button>
+    <button class="nav-btn" data-target="about">About Us</button>
+    <button class="nav-btn" data-target="services">What We Do</button>
+    <button class="nav-btn" data-target="contact">Contact Us</button>
   </nav>
 
-  <section id="home">
-    <h1>Hello from Bhuvana!</h1>
-    <p>Welcome to my website. It is published automatically every time I push to GitHub.</p>
-    <p><a class="btn" href="#try">Try it</a></p>
-  </section>
+  <main class="content">
+    <section id="home" class="panel active">
+      <h1>Hello from Bhuvana!</h1>
+      <p>Welcome to my website. It is published automatically every time I push to GitHub.</p>
+      <h2>Try it</h2>
+      <button id="greet" class="cta">Click me</button>
+      <p id="message"></p>
+    </section>
 
-  <section id="about">
-    <h2>About Us</h2>
-    <p>We are a small team that loves building simple, useful things for the web.</p>
-    <p>This site was built with Hermes Agent and is hosted on Cloudflare.</p>
-  </section>
+    <section id="about" class="panel">
+      <h1>About Us</h1>
+      <p>We are a small team that loves building simple, useful things for the web.</p>
+      <p>This site was built with Hermes Agent and is hosted on Cloudflare.</p>
+    </section>
 
-  <section id="whatWeDo">
-    <h2>What We Do</h2>
-    <ul>
-      <li>Build websites and web apps</li>
-      <li>Help people learn to code with AI</li>
-      <li>Publish projects live in minutes</li>
-    </ul>
-  </section>
+    <section id="services" class="panel">
+      <h1>What We Do</h1>
+      <ul>
+        <li>Build websites and web apps</li>
+        <li>Help people learn to code with AI</li>
+        <li>Publish projects live in minutes</li>
+      </ul>
+    </section>
 
-  <section id="quality-analyst">
-    <h2>Quality Analyst</h2>
-    <p>Focused on building reliable, high-quality software through testing and QA.</p>
-    <p><a class="btn" href="#contact">Quality Analyst Button</a></p>
-  </section>
+    <section id="contact" class="panel">
+      <h1>Contact Us</h1>
+      <p>We would love to hear from you.</p>
+      <p>Email: <a href="mailto:hello@example.com">hello@example.com</a></p>
+      <p>Address: 467, Wonton Street, Calgary, Alberta, Canada</p>
+    </section>
+  </main>
 
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>We would love to hear from you.</p>
-    <p>Email: <a href="mailto:hello@example.com">hello@example.com</a></p>
-  </section>
-
-  <div class="address">
-    <p>567, Wonton Street, Calgary</p>
-  </div>
-
-  <footer>
-    <p>&copy; 2026 Bhuvana's Site. Built with Hermes Agent, hosted on Cloudflare.</p>
-  </footer>
-
+  <script src="script.js"></script>
 </body>
 </html>
